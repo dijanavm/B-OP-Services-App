@@ -9,6 +9,8 @@ table {
     }
     td {
         border: 1px solid #dddddd;
+        img{width: 100px;
+          height: 100px;}
     }
     td, th {
         text-align: left;
@@ -19,29 +21,33 @@ table {
         background-color: #dddddd;
     }
 }
-
-button{
+ 
+img{
+  width: 356px;
+  height: 250px;
+  border-radius:8px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+div.container {
   text-align: center;
-  border-radius: 4px;
-  border-color: #c2c4e0;
-  width: 100px;
-  height: 40px;
-  text-size-adjust: 12px;
-  margin-top: 10px;
-  margin-left: 140px;
+  padding: 10px 20px;
 }
 
-.container{
-  display: grid;
-  grid-template-columns: 4cm 3cm;
+h2{
+  color: rgb(57, 69, 133);
+}
+ 
+h5{
+  text-align: right;
 }
 
-button:hover{
-  background-color: #bec0d8; 
-  color: rgb(163, 162, 180);
-  // box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+input{
+  border-radius: 8px;
+  height: 5.3%;
+  border-color: rgb(153, 152, 161);
 }
-
 
 .wrap{
   .search {

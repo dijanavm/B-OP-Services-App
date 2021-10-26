@@ -1,0 +1,29 @@
+<router-outlet></router-outlet>
+
+<br>
+<h1>Technology articles</h1>
+    <input type="text" [(ngModel)] = "searchValue" id="search"
+    placeholder="Search..."/>
+
+<div class="container">
+    <div class="row pt-5">
+        <div class="col-md-4 p-2" *ngFor="let technology of technologies | searchfilter:searchValue | paginate: {itemsPerPage: 6, currentPage: p};">
+            <div class="card shadow">
+                <div class="card-body">
+                    <h2 class="card-title text-center">{{technology.title}}</h2>
+                    <br>
+                    <img src="{{technology.image}}">
+                    <br>
+                    <a target="_blank" href="{{technology.url}}">{{technology.url}}</a>
+                    <h4>{{technology.author}}</h4>
+                    <br>
+                    <p>{{technology.description}}</p>
+                    <h5>{{technology.published_at}}</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<pagination-controls (pageChange) = "p = $event"> </pagination-controls>
